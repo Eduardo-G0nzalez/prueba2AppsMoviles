@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <ion-button (click)="goToLogin()">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+    Volver
+  </ion-button>
+  <span class="spacer"></span>
+</mat-toolbar>
+
+<ion-content>
+  <div class="welcome-container">
+    <ion-label class="welcome-text">
+      Bienvenido {{ username }}!
+    </ion-label>
+  </div>
+  <div class="qr-button-container">
+    <ion-button class="custom-button" expand="full" (click)="mostrarQR()">Mostrar QR</ion-button>
+
+  </div>
+</ion-content>

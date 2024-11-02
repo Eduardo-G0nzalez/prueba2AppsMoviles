@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-button (click)="goToLogin()" fill="clear" class="volver">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </ion-button>
+  <span class="toolbar-title">Escanear QR</span>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="scanActive" class="camera-container">
+    <p>Apunta tu cámara al código QR</p>
+    <img *ngIf="imageUrl" [src]="imageUrl" alt="Captured Image" />
+    <ion-button expand="full" color="danger" (click)="stopScan()">Detener Escaneo</ion-button>
+  </div>
+  <div *ngIf="!scanActive">
+    <ion-button expand="full" (click)="startScan()">Iniciar Escaneo</ion-button>
+  </div>
+</ion-content>

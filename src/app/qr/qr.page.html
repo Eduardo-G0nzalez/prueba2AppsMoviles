@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-button (click)="goToLogin()" fill="clear" class="volver">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </ion-button>
+  <span class="toolbar-title">Código QR</span>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngIf="qrCodeUrl">
+    <img [src]="qrCodeUrl" alt="Código QR" />
+  </div>
+  <p *ngIf="!qrCodeUrl">Generando código QR...</p>
+</ion-content>
+

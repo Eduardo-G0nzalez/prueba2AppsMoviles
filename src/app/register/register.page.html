@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button (click)="goToLogin()" fill="clear" class="volver">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <span class="toolbar-title">Registrar Cuenta</span>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="register-container">
+    <ion-item>
+      <ion-label position="floating">Nombre de Usuario</ion-label>
+      <ion-input [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Rol</ion-label>
+      <ion-select [(ngModel)]="role">
+        <ion-select-option value="docente">Docente</ion-select-option>
+        <ion-select-option value="alumno">Alumno</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="full" (click)="onRegister()" class="botonRegistro">REGISTRARSE</ion-button>
+
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </div>
+</ion-content>

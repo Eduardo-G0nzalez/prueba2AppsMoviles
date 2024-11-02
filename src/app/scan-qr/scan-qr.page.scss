@@ -1,0 +1,63 @@
+ion-content {
+  --background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+ion-toolbar {
+  --background: #001f3f;
+  color: #FFFFFF;
+  text-align: center;
+  position: relative;
+  padding: 0;
+}
+
+.volver {
+  --background: transparent;
+  --color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9em;
+  height: 32px;
+  padding-left: 8px;
+}
+
+.volver ion-icon {
+  font-size: 18px;
+  margin-right: 4px;
+}
+
+.toolbar-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+ion-content > div:not(.camera-container) ion-button {
+  --background: #FFB800;
+  --color: #1A1A1A;
+  font-weight: bold;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10%;
+}
+
+.camera-container ion-button {
+  --background: #FF4C4C;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-top: 10px;
+}

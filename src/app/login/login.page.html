@@ -1,0 +1,33 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="toolbar-title">RegistrApp</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="login-container">
+    <div class="textoLogin">
+      <h2>Iniciar Sesión</h2>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Nombre de Usuario</ion-label>
+      <ion-input [(ngModel)]="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <div class="button-container">
+      <ion-button expand="full" (click)="login()">Ingresar</ion-button>
+      <ion-button expand="full" (click)="irResetPassword()">Restablecer Contraseña</ion-button>
+    </div>
+
+    <div class="registro">
+      <p>¿No tiene cuenta?</p>
+      <ion-button expand="full" (click)="irRegistro()">Registrarse</ion-button>
+    </div>
+  </div>
+</ion-content>
